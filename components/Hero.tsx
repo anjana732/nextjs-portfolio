@@ -156,13 +156,14 @@ const Hero = () => {
             transition={{ delay: 0.8, duration: 0.8 }}
           >
             {[
-              { icon: Github, href: 'https://github.com/anjana732', label: 'GitHub' },
-              { icon: Linkedin, href: '#', label: 'LinkedIn' },
+              { icon: Github, href: `https://github.com/anjana732`, label: 'GitHub' },
+              { icon: Linkedin, href: 'https://www.linkedin.com/in/anjana732/', label: 'LinkedIn' },
               { icon: Mail, href: '#contact', label: 'Email' },
             ].map((social, index) => (
               <motion.a
                 key={social.label}
                 href={social.href}
+                target="_blank" 
                 className="w-12 h-12 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-full flex items-center justify-center text-slate-300 hover:text-white hover:bg-slate-700/50 transition-all duration-300"
                 whileHover={{ scale: 1.1, y: -2 }}
                 whileTap={{ scale: 0.95 }}
