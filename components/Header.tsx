@@ -54,7 +54,7 @@ const Header = () => {
             <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-lg flex items-center justify-center">
               <Code className="w-5 h-5 text-white" />
             </div>
-            <span className="text-xl font-bold text-white">Anjana</span>
+            <span className="text-xl font-bold text-white"></span>
           </motion.div>
 
           {/* Desktop Navigation */}
