@@ -156,7 +156,7 @@ const Hero = () => {
             transition={{ delay: 0.8, duration: 0.8 }}
           >
             {[
-              { icon: Github, href: '#', label: 'GitHub' },
+              { icon: Github, href: 'https://github.com/anjana732', label: 'GitHub' },
               { icon: Linkedin, href: '#', label: 'LinkedIn' },
               { icon: Mail, href: '#contact', label: 'Email' },
             ].map((social, index) => (
