@@ -155,8 +155,8 @@ const Hero = () => {
               Download CV
             </Button> */}
             <a
-              href="/resume.pdf"
-              download="Anjana_Singh_Resume.pdf"
+              href="/Anjana_Kumari_Resume.pdf"
+              download="Anjana_Kumari_Resume.pdf"
               className="inline-flex items-center px-8 py-3 rounded-full font-semibold border border-slate-400 text-slate-300 hover:bg-slate-800 transition-all duration-300"
             >
               <Download className="w-4 h-4 mr-2" />
