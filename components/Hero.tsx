@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { motion, useAnimation } from 'framer-motion';
-import { useEffect } from 'react';
-import { ChevronDown, Github, Linkedin, Mail, Download } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { motion, useAnimation } from "framer-motion";
+import { useEffect } from "react";
+import { ChevronDown, Github, Linkedin, Mail, Download } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   const controls = useAnimation();
@@ -14,7 +14,7 @@ const Hero = () => {
       transition: {
         duration: 2,
         repeat: Infinity,
-        ease: 'easeInOut',
+        ease: "easeInOut",
       },
     });
   }, [controls]);
@@ -26,18 +26,21 @@ const Hero = () => {
       transition: {
         duration: 3,
         repeat: Infinity,
-        ease: 'easeInOut',
+        ease: "easeInOut",
       },
     },
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section
+      id="hero"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+    >
       {/* Animated Background */}
       <div className="absolute inset-0">
         {/* Gradient Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900/20 to-cyan-900/20" />
-        
+
         {/* Animated Particles */}
         <div className="absolute inset-0">
           {[...Array(20)].map((_, i) => (
@@ -59,14 +62,14 @@ const Hero = () => {
         <motion.div
           className="absolute top-20 left-10 w-20 h-20 border border-blue-400/20 rotate-45"
           animate={{ rotate: 365 }}
-          transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
         />
         <motion.div
           className="absolute bottom-20 right-10 w-16 h-16 border border-cyan-400/20"
           animate={{ rotate: -365 }}
-          transition={{ duration: 15, repeat: Infinity, ease: 'linear' }}
+          transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
         />
-        
+
         {/* Code-like lines */}
         <div className="absolute top-0 left-0 w-full h-full opacity-10">
           {[...Array(10)].map((_, i) => (
@@ -76,13 +79,13 @@ const Hero = () => {
               style={{
                 top: `${i * 10 + 10}%`,
                 left: 0,
-                width: '100%',
+                width: "100%",
               }}
-              animate={{ x: ['-100%', '100%'] }}
+              animate={{ x: ["-100%", "100%"] }}
               transition={{
                 duration: 8 + i,
                 repeat: Infinity,
-                ease: 'linear',
+                ease: "linear",
                 delay: i * 0.5,
               }}
             />
@@ -103,7 +106,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
-            Hi, I'm{' '}
+            Hi, I'm{" "}
             <motion.span
               className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"
               animate={{ opacity: [1, 0.7, 1] }}
@@ -112,7 +115,7 @@ const Hero = () => {
               Anjana
             </motion.span>
           </motion.h1>
-          
+
           <motion.p
             className="text-xl sm:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 30 }}
@@ -135,18 +138,30 @@ const Hero = () => {
             <Button
               size="lg"
               className="bg-gradient-to-r from-blue-500 to-cyan-400 hover:from-blue-600 hover:to-cyan-500 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
-              onClick={() => document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() =>
+                document
+                  .querySelector("#projects")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
             >
               View My Work
             </Button>
-            <Button
+            {/* <Button
               size="lg"
               variant="outline"
               className="border-slate-400 text-slate-300 hover:bg-slate-800 px-8 py-3 rounded-full font-semibold"
             >
               <Download className="w-4 h-4 mr-2" />
               Download CV
-            </Button>
+            </Button> */}
+            <a
+              href="/resume.pdf"
+              download="Anjana_Singh_Resume.pdf"
+              className="inline-flex items-center px-8 py-3 rounded-full font-semibold border border-slate-400 text-slate-300 hover:bg-slate-800 transition-all duration-300"
+            >
+              <Download className="w-4 h-4 mr-2" />
+              Download CV
+            </a>
           </motion.div>
 
           <motion.div
@@ -156,14 +171,23 @@ const Hero = () => {
             transition={{ delay: 0.8, duration: 0.8 }}
           >
             {[
-              { icon: Github, href: `https://github.com/anjana732`, label: 'GitHub' },
-              { icon: Linkedin, href: 'https://www.linkedin.com/in/anjana732/', label: 'LinkedIn' },
-              { icon: Mail, href: '#contact', label: 'Email' },
+              {
+                icon: Github,
+                href: `https://github.com/anjana732`,
+                label: "GitHub",
+              },
+              {
+                icon: Linkedin,
+                href: `https://www.linkedin.com/in/anjana732/`,
+                label: "LinkedIn",
+              },
+              { icon: Mail, href: "#contact", label: "Email" },
             ].map((social, index) => (
               <motion.a
                 key={social.label}
                 href={social.href}
-                target="_blank" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-12 h-12 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-full flex items-center justify-center text-slate-300 hover:text-white hover:bg-slate-700/50 transition-all duration-300"
                 whileHover={{ scale: 1.1, y: -2 }}
                 whileTap={{ scale: 0.95 }}
