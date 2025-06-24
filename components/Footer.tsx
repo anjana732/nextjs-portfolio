@@ -15,13 +15,13 @@ const Footer = () => {
       { name: 'Journey', href: '#journey' },
       { name: 'Skills', href: '#skills' },
       { name: 'Projects', href: '#projects' },
-      { name: 'Blog', href: '#blog' },
+      // { name: 'Blog', href: '#blog' },
       { name: 'Contact', href: '#contact' },
     ],
     social: [
       { name: 'GitHub', href: '#', icon: Github },
       { name: 'LinkedIn', href: '#', icon: Linkedin },
-      { name: 'Email', href: 'mailto:anjana@example.com', icon: Mail },
+      { name: 'Email', href: 'mailto:anjanasingh1257@gmail.com', icon: Mail },
     ],
   };
 
@@ -103,13 +103,13 @@ const Footer = () => {
             <h3 className="text-lg font-semibold text-white">Let's Connect</h3>
             <div className="space-y-2">
               <p className="text-slate-400">
-                <strong className="text-white">Email:</strong> anjana@example.com
+                <strong className="text-white">Email:</strong> anjanasingh1257@gmail.com
               </p>
               <p className="text-slate-400">
                 <strong className="text-white">Location:</strong> India
               </p>
               <p className="text-slate-400">
-                <strong className="text-white">Currently:</strong> Software Developer at Fristine Infotech
+                <strong className="text-white">Currently:</strong> Software Developer : Open to Work
               </p>
             </div>
           </motion.div>
