@@ -42,7 +42,7 @@ const About = () => {
           </h2>
           <p className="text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed">
             I'm a passionate Full Stack Developer with strong academic foundation and professional experience. 
-            I completed my BCA and MCA with excellent academic performance and currently work at Fristine Infotech, 
+            I completed my BCA and MCA with excellent academic performance and worked for Fristine Infotech, 
             where I contribute to innovative software solutions. I love turning complex problems into simple, 
             beautiful, and intuitive designs.
           </p>
@@ -88,7 +88,7 @@ const About = () => {
                 transition={{ duration: 0.6, delay: 0.6 }}
                 viewport={{ once: true }}
               >
-                2+
+                1
               </motion.div>
               <p className="text-slate-400">Years Experience</p>
             </div>

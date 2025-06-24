@@ -16,14 +16,14 @@ const Journey = () => {
   const journeySteps = [
     {
       year: '2018-2021',
-      title: 'Bachelor of Computer Applications (BCA)',
+      title: 'Bachelor of Computer Applications (BCA) | 79%',
       description: 'Started my journey in computer science, building strong fundamentals in programming, mathematics, and software development.',
       icon: GraduationCap,
       status: 'completed',
     },
     {
       year: '2022-2024',
-      title: 'Master of Computer Applications (MCA)',
+      title: 'Master of Computer Applications (MCA) | 8.78 CGPA',
       description: 'Advanced my knowledge in software engineering, database systems, and modern development practices.',
       icon: BookOpen,
       status: 'completed',
