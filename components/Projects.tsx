@@ -32,34 +32,8 @@ const Projects = () => {
       githubUrl: '#',
       liveUrl: '#',
       featured: false,
-    },
-    {
-      title: 'Social Media Analytics',
-      description: 'Analytics dashboard for social media metrics with data visualization, user engagement tracking, and performance insights.',
-      image: 'https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['Vue.js', 'D3.js', 'Python', 'Flask', 'Redis'],
-      githubUrl: '#',
-      liveUrl: '#',
-      featured: false,
-    },
-    {
-      title: 'Learning Management System',
-      description: 'Educational platform with course management, video streaming, progress tracking, and interactive assignments.',
-      image: 'https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['React', 'Express.js', 'MySQL', 'AWS S3', 'JWT'],
-      githubUrl: '#',
-      liveUrl: '#',
-      featured: false,
-    },
-    {
-      title: 'Real Estate Platform',
-      description: 'Property listing and management system with advanced search, virtual tours, and mortgage calculator.',
-      image: 'https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['Next.js', 'Strapi', 'PostgreSQL', '360° API'],
-      githubUrl: '#',
-      liveUrl: '#',
-      featured: false,
-    },
+    }
+   
   ];
 
   const container = {
