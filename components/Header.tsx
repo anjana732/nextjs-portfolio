@@ -22,7 +22,7 @@ const Header = () => {
     { name: 'Journey', href: '#journey', icon: Code },
     { name: 'Skills', href: '#skills', icon: Code },
     { name: 'Projects', href: '#projects', icon: Briefcase },
-    { name: 'Blog', href: '#blog', icon: BookOpen },
+    // { name: 'Blog', href: '#blog', icon: BookOpen },
     { name: 'Contact', href: '#contact', icon: Mail },
   ];
 

@@ -6,7 +6,7 @@ import About from '@/components/About';
 import Journey from '@/components/Journey';
 import Skills from '@/components/Skills';
 import Projects from '@/components/Projects';
-import Blog from '@/components/Blog';
+// import Blog from '@/components/Blog';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
@@ -25,7 +25,7 @@ export default function Home() {
         <Journey />
         <Skills />
         <Projects />
-        <Blog />
+        {/* <Blog /> */}
         <Contact />
       </motion.main>
       <Footer />
