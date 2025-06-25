@@ -11,8 +11,8 @@ const Projects = () => {
       description: 'An interactive learning tool built with the MERN stack. Users can take timed quizzes, and track their performance. Features include Generative AI hint, veriety of question, and real-time score feedback.',
       image: 'https://images.pexels.com/photos/5905707/pexels-photo-5905707.jpeg?auto=compress&cs=tinysrgb&w=800',
       technologies: ['React', 'Node.js', 'webhook', 'Express', 'Gen AI'],
-      githubUrl: '#',
-      liveUrl: '#',
+      githubUrl: 'https://github.com/anjana732/flashcard-quiz-app',
+      liveUrl: 'https://flashcard-quiz-app-eight.vercel.app/',
       featured: true,
     },
     {
@@ -20,7 +20,7 @@ const Projects = () => {
       description: 'A scalable payment microservice, integrated with Stripe and Razorpay gateways. Supports secure payment processing, webhook handling, and transaction logging across microservice architecture.',
       image: 'https://images.pexels.com/photos/4386373/pexels-photo-4386373.jpeg?auto=compress&cs=tinysrgb&w=800',
       technologies: ['Node.js', 'Express', 'Stripe', 'Razorpay', 'MongoDB'],
-      githubUrl: '#',
+      githubUrl: 'https://github.com/anjana732/payment-microservice',
       liveUrl: '#',
       featured: true,
     },
@@ -28,9 +28,9 @@ const Projects = () => {
       title: 'Weather Dashboard',
       description: 'A responsive weather application with location-based forecasts and detailed weather analytics.',
       image: 'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['React', 'OpenWeather API', 'Chart.js', 'Mapbox'],
-      githubUrl: '#',
-      liveUrl: '#',
+      technologies: ['HTML5', 'OpenWeather API', 'Chart.js', 'SCSS'],
+      githubUrl: 'https://github.com/anjana732/WeatherApp',
+      liveUrl: 'https://anjana732.github.io/WeatherApp/',
       featured: false,
     }
 
