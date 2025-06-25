@@ -7,33 +7,33 @@ import { Button } from '@/components/ui/button';
 const Projects = () => {
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce solution with React, Node.js, and MongoDB. Features include user authentication, payment integration, and admin dashboard.',
-      image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe', 'Tailwind CSS'],
+      title: 'Flashcard Quiz Application',
+      description: 'An interactive learning tool built with the MERN stack. Users can take timed quizzes, and track their performance. Features include Generative AI hint, veriety of question, and real-time score feedback.',
+      image: 'https://images.pexels.com/photos/5905707/pexels-photo-5905707.jpeg?auto=compress&cs=tinysrgb&w=800',
+      technologies: ['React', 'Node.js', 'webhook', 'Express', 'Gen AI'],
       githubUrl: '#',
       liveUrl: '#',
       featured: true,
     },
     {
-      title: 'Task Management App',
-      description: 'A collaborative project management tool with real-time updates, drag-and-drop functionality, and team collaboration features.',
-      image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['Next.js', 'TypeScript', 'Prisma', 'PostgreSQL', 'Socket.io'],
+      title: 'Payment Microservice',
+      description: 'A scalable payment microservice, integrated with Stripe and Razorpay gateways. Supports secure payment processing, webhook handling, and transaction logging across microservice architecture.',
+      image: 'https://images.pexels.com/photos/4386373/pexels-photo-4386373.jpeg?auto=compress&cs=tinysrgb&w=800',
+      technologies: ['Node.js', 'Express', 'Stripe', 'Razorpay', 'MongoDB'],
       githubUrl: '#',
       liveUrl: '#',
       featured: true,
     },
     {
       title: 'Weather Dashboard',
-      description: 'A responsive weather application with location-based forecasts, interactive maps, and detailed weather analytics.',
+      description: 'A responsive weather application with location-based forecasts and detailed weather analytics.',
       image: 'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=800',
       technologies: ['React', 'OpenWeather API', 'Chart.js', 'Mapbox'],
       githubUrl: '#',
       liveUrl: '#',
       featured: false,
     }
-   
+
   ];
 
   const container = {
@@ -81,9 +81,8 @@ const Projects = () => {
               key={project.title}
               variants={item}
               whileHover={{ y: -10, scale: 1.02 }}
-              className={`bg-slate-800/60 backdrop-blur-sm border border-slate-700/50 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all duration-300 ${
-                project.featured ? 'md:col-span-2 lg:col-span-1' : ''
-              }`}
+              className={`bg-slate-800/60 backdrop-blur-sm border border-slate-700/50 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all duration-300 ${project.featured ? 'md:col-span-2 lg:col-span-1' : ''
+                }`}
             >
               <div className="relative overflow-hidden group">
                 <img
@@ -111,11 +110,11 @@ const Projects = () => {
                   </div>
                 </div>
               </div>
-              
+
               <div className="p-6">
                 <h3 className="text-xl font-bold text-white mb-3">{project.title}</h3>
                 <p className="text-slate-400 mb-4 leading-relaxed">{project.description}</p>
-                
+
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech) => (
                     <span
@@ -126,7 +125,7 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
-                
+
                 <div className="flex items-center justify-between">
                   <div className="flex space-x-3">
                     <motion.a
@@ -144,7 +143,7 @@ const Projects = () => {
                       <ExternalLink className="w-5 h-5" />
                     </motion.a>
                   </div>
-                  
+
                   {project.featured && (
                     <span className="px-2 py-1 bg-gradient-to-r from-blue-500 to-cyan-400 text-white text-xs rounded-full font-medium">
                       Featured
