@@ -92,7 +92,8 @@ const Projects = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
                   <div className="flex space-x-2">
-                    <Button
+                    <Button 
+                      onClick={() => window.open(project.githubUrl, '_blank')}
                       size="sm"
                       variant="outline"
                       className="bg-slate-800/80 backdrop-blur-sm border-slate-600 text-white hover:bg-slate-700/80"
@@ -101,6 +102,7 @@ const Projects = () => {
                       Code
                     </Button>
                     <Button
+                      onClick={() => window.open(project.liveUrl, '_blank')}
                       size="sm"
                       className="bg-gradient-to-r from-blue-500 to-cyan-400 hover:from-blue-600 hover:to-cyan-500 text-white"
                     >
