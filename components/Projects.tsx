@@ -14,7 +14,7 @@ const Projects = () => {
       technologies: ['React', 'Node.js', 'webhook', 'Express', 'Gen AI'],
       githubUrl: 'https://github.com/anjana732/flashcard-quiz-app',
       liveUrl: 'https://flashcard-quiz-app-eight.vercel.app/',
-      categories: ['Featured', 'Full stack'],
+      categories: ['Featured', 'Full Stack'],
     },
     {
       title: 'Payment Microservice',
@@ -35,14 +35,24 @@ const Projects = () => {
       categories: ['Featured', 'Frontend'],
     },
     {
-      title: 'Weather Dashboard',
-      description: 'A responsive weather application with location-based forecasts and detailed weather analytics.',
-      image: 'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['HTML5', 'OpenWeather API', 'Chart.js', 'SCSS'],
-      githubUrl: 'https://github.com/anjana732/WeatherApp',
-      liveUrl: 'https://anjana732.github.io/WeatherApp/',
-      categories: ['Featured', 'Frontend'],
+      title: 'Authentication Microservice',
+      description: 'A lightweight authentication microservice for handling user registration and login using secure password hashing and JWT-based authentication, designed for integration with other services.',
+      image: 'https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=800',
+      technologies: ['Node.js', 'Express.js', 'MongoDB', 'Mongoose', 'JWT', 'bcrypt', 'dotenv'],
+      githubUrl: 'https://github.com/anjana732/authentication-microservice',
+      liveUrl: '',
+      categories: ['Microservice']
+    },
+    {
+      title: 'Book Review API',
+      description: 'A backend API with user authentication and protected routes for managing and searching books and reviews.',
+      image: 'https://images.pexels.com/photos/1370295/pexels-photo-1370295.jpeg?auto=compress&cs=tinysrgb&w=800',
+      technologies: ['Node.js', 'Express.js', 'MongoDB', 'Mongoose', 'JWT', 'bcrypt', 'dotenv'],
+      githubUrl: 'https://github.com/anjana732/book-review-api',
+      liveUrl: '',
+      categories: ['Backend']
     }
+
   ];
 
   const tabs = ['Featured', 'Frontend', 'Backend', 'Full Stack', 'Microservice'];
@@ -96,11 +106,10 @@ const Projects = () => {
                 setActiveTab(tab);
                 setShowAll(false);
               }}
-              className={`px-4 py-2 rounded-full border text-sm font-medium transition-all duration-300 ${
-                activeTab === tab
-                  ? 'bg-blue-500 text-white border-blue-500'
-                  : 'bg-transparent text-slate-300 border-slate-500 hover:bg-slate-700'
-              }`}
+              className={`px-4 py-2 rounded-full border text-sm font-medium transition-all duration-300 ${activeTab === tab
+                ? 'bg-blue-500 text-white border-blue-500'
+                : 'bg-transparent text-slate-300 border-slate-500 hover:bg-slate-700'
+                }`}
             >
               {tab}
             </button>
