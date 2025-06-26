@@ -1,3 +1,4 @@
+
 // 'use client';
 
 // import { motion } from 'framer-motion';
@@ -41,11 +42,11 @@
 //       title: 'Authentication Microservice',
 //       description: 'A lightweight authentication microservice for handling user registration and login using secure password hashing and JWT-based authentication, designed for integration with other services.',
 //       image: 'https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=800',
-//       technologies: ['Node.js', 'Express.js', 'MongoDB', 'Mongoose', 'JWT', 'bcrypt', 'dotenv'],
+//       technologies: ['Node.js', 'Express.js', 'MongoDB', 'Mongoose', 'JWT', 'bcrypt'],
 //       githubUrl: 'https://github.com/anjana732/authentication-microservice',
 //       liveUrl: '',
 //       categories: ['Microservice'],
-//       tag: 'nodejs'
+//       tag: 'nodejs',
 //     },
 //     {
 //       title: 'Book Review API',
@@ -56,7 +57,88 @@
 //       liveUrl: '',
 //       categories: ['Backend'],
 //       tag: 'nodejs',
-//     }
+//     },
+//     {
+//   title: 'Mood Journal',
+//   description: 'A frontend app to track daily moods and fetch "Thoughts of the Day" from an external API, with data saved in localStorage.',
+//   image: 'https://images.pexels.com/photos/5940846/pexels-photo-5940846.jpeg?auto=compress&cs=tinysrgb&w=800',
+//   technologies: ['React', 'Tailwind', 'External API', 'localStorage'],
+//   githubUrl: 'https://github.com/anjana732/mood-journal',
+//   liveUrl: 'https://mood-journal-ecru.vercel.app/',
+//   categories: ['Frontend'],
+//   tag: 'React',
+// },
+// {
+//   title: 'Flip the Coin',
+//   description: 'A simple interactive app that simulates a coin toss with random outcomes and smooth animations.',
+//   image: 'https://images.pexels.com/photos/210600/pexels-photo-210600.jpeg?auto=compress&cs=tinysrgb&w=800',
+//   technologies: ['JavaScript', 'HTML5', 'CSS3'],
+//   githubUrl: 'https://github.com/anjana732/flip-coin',
+//   liveUrl: 'https://anjana732.github.io/flip-coin/',
+//   categories: ['Frontend'],
+//   tag: 'javascript',
+// },
+// {
+//   title: 'Color Scheme Switcher',
+//   description: 'A lightweight web app that lets users switch between different color themes to personalize the UI experience.',
+//   image: 'https://images.pexels.com/photos/1832324/pexels-photo-1832324.jpeg?auto=compress&cs=tinysrgb&w=800',
+//   technologies: ['JavaScript', 'HTML5', 'CSS3'],
+//   githubUrl: 'https://github.com/anjana732/color-scheme-switcher',
+//   liveUrl: 'https://anjana732.github.io/JsProjects/ColorSwitcher/index.html',
+//   categories: ['Frontend'],
+//   tag: 'javascript',
+// },
+// {
+//   title: 'BMI Calculator',
+//   description: 'A simple tool to calculate Body Mass Index based on user input and provide health category feedback.',
+//   image: 'https://images.pexels.com/photos/6551076/pexels-photo-6551076.jpeg?auto=compress&cs=tinysrgb&w=800',
+//   technologies: ['JavaScript', 'HTML5', 'CSS3'],
+//   githubUrl: 'https://github.com/anjana732/bmi-calculator',
+//   liveUrl: 'https://anjana732.github.io/JsProjects/BMICalulator/index.html',
+//   categories: ['Frontend'],
+//   tag: 'javascript',
+// },
+// {
+//   title: 'Digital Clock',
+//   description: 'A real-time digital clock that displays the current time with a clean and responsive UI.',
+//   image: 'https://images.pexels.com/photos/1314544/pexels-photo-1314544.jpeg?auto=compress&cs=tinysrgb&w=800',
+//   technologies: ['JavaScript', 'HTML5', 'CSS3'],
+//   githubUrl: 'https://github.com/anjana732/digital-clock',
+//   liveUrl: 'https://anjana732.github.io/JsProjects/DigitalClock/index.html',
+//   categories: ['Frontend'],
+//   tag: 'javascript',
+// },
+// {
+//   title: 'Number Guessing Game',
+//   description: 'An interactive game where users guess a random number with hints provided based on their input.',
+//   image: 'https://images.pexels.com/photos/4425763/pexels-photo-4425763.jpeg?auto=compress&cs=tinysrgb&w=800',
+//   technologies: ['JavaScript', 'HTML5', 'CSS3'],
+//   githubUrl: 'https://github.com/anjana732/number-guessing-game',
+//   liveUrl: 'https://anjana732.github.io/JsProjects/GuessNumber/index.html',
+//   categories: ['Frontend'],
+//   tag: 'javascript',
+// },
+
+// {
+//   title: 'Unlimited Color Changer',
+//   description: 'A fun app that continuously changes background colors on Start button click and stops on End button click.',
+//   image: 'https://images.pexels.com/photos/939329/pexels-photo-939329.jpeg?auto=compress&cs=tinysrgb&w=800',
+//   technologies: ['JavaScript', 'HTML5', 'CSS3'],
+//   githubUrl: 'https://github.com/anjana732/unlimited-color-changer',
+//   liveUrl: 'https://anjana732.github.io/JsProjects/BackGroundChanger/index.html',
+//   categories: ['Frontend'],
+//   tag: 'javascript',
+// },
+// {
+//   title: 'Keypress Detector',
+//   description: 'A simple app that detects and displays the key pressed by the user along with its code.',
+//   image: 'https://images.pexels.com/photos/2115257/pexels-photo-2115257.jpeg?auto=compress&cs=tinysrgb&w=800',
+//   technologies: ['JavaScript', 'HTML5', 'CSS3'],
+//   githubUrl: 'https://github.com/anjana732/keypress-detector',
+//   liveUrl: 'https://anjana732.github.io/JsProjects/KeyPressDetector/index.html',
+//   categories: ['Frontend'],
+//   tag: 'javascript',
+// }
 
 //   ];
 
@@ -65,7 +147,7 @@
 //   const [showAll, setShowAll] = useState(false);
 
 //   const filteredProjects = projects.filter((project) =>
-//     activeTab === 'Featured' || project.categories.includes(activeTab)
+//     activeTab === '' || project.categories.includes(activeTab)
 //   );
 
 //   const visibleProjects = showAll ? filteredProjects : filteredProjects.slice(0, 3);
@@ -199,14 +281,9 @@
 //                       </motion.a>
 //                     </div>
 //                     <div className="flex flex-wrap gap-2">
-//                       {/* {project.categories.map((cat) => ( */}
-//                         <span
-//                           // key={cat}
-//                           className="px-2 py-1 text-xs font-medium bg-gradient-to-r from-blue-500 to-cyan-400 text-white rounded-full"
-//                         >
-//                           {project.tag}
-//                         </span>
-//                       {/* ))} */}
+//                       <span className="px-2 py-1 text-xs font-medium bg-gradient-to-r from-blue-500 to-cyan-400 text-white rounded-full">
+//                         {project.tag}
+//                       </span>
 //                     </div>
 //                   </div>
 //                 </div>
@@ -219,7 +296,7 @@
 //           )}
 //         </motion.div>
 
-//         {filteredProjects.length > 3 && (
+//         {activeTab === 'Featured' && filteredProjects.length > 3 && (
 //           <motion.div
 //             initial={{ opacity: 0, y: 30 }}
 //             whileInView={{ opacity: 1, y: 0 }}
@@ -244,7 +321,6 @@
 
 // export default Projects;
 
-
 'use client';
 
 import { motion } from 'framer-motion';
@@ -253,7 +329,7 @@ import { Button } from '@/components/ui/button';
 import { useState } from 'react';
 
 const Projects = () => {
-  const projects = [
+ const projects = [
     {
       title: 'Flashcard Quiz Application',
       description: 'An interactive learning tool built with the MERN stack. Users can take timed quizzes, and track their performance. Features include Generative AI hint, veriety of question, and real-time score feedback.',
@@ -303,7 +379,89 @@ const Projects = () => {
       liveUrl: '',
       categories: ['Backend'],
       tag: 'nodejs',
-    }
+    },
+    {
+  title: 'Mood Journal',
+  description: 'A frontend app to track daily moods and fetch "Thoughts of the Day" from an external API, with data saved in localStorage.',
+  image: 'https://images.pexels.com/photos/5940846/pexels-photo-5940846.jpeg?auto=compress&cs=tinysrgb&w=800',
+  technologies: ['React', 'Tailwind', 'External API', 'localStorage'],
+  githubUrl: 'https://github.com/anjana732/mood-journal',
+  liveUrl: 'https://mood-journal-ecru.vercel.app/',
+  categories: ['Frontend'],
+  tag: 'React',
+},
+{
+  title: 'Flip the Coin',
+  description: 'A simple interactive app that simulates a coin toss with random outcomes and smooth animations.',
+  image: 'https://images.pexels.com/photos/210600/pexels-photo-210600.jpeg?auto=compress&cs=tinysrgb&w=800',
+  technologies: ['JavaScript', 'HTML5', 'CSS3'],
+  githubUrl: 'https://github.com/anjana732/flip-coin',
+  liveUrl: 'https://anjana732.github.io/flip-coin/',
+  categories: ['Frontend'],
+  tag: 'javascript',
+},
+{
+  title: 'Color Scheme Switcher',
+  description: 'A lightweight web app that lets users switch between different color themes to personalize the UI experience.',
+  image: 'https://images.pexels.com/photos/1832324/pexels-photo-1832324.jpeg?auto=compress&cs=tinysrgb&w=800',
+  technologies: ['JavaScript', 'HTML5', 'CSS3'],
+  githubUrl: 'https://github.com/anjana732/color-scheme-switcher',
+  liveUrl: 'https://anjana732.github.io/JsProjects/ColorSwitcher/index.html',
+  categories: ['Frontend'],
+  tag: 'javascript',
+},
+{
+  title: 'BMI Calculator',
+  description: 'A simple tool to calculate Body Mass Index based on user input and provide health category feedback.',
+  image: 'https://images.pexels.com/photos/6551076/pexels-photo-6551076.jpeg?auto=compress&cs=tinysrgb&w=800',
+  technologies: ['JavaScript', 'HTML5', 'CSS3'],
+  githubUrl: 'https://github.com/anjana732/bmi-calculator',
+  liveUrl: 'https://anjana732.github.io/JsProjects/BMICalulator/index.html',
+  categories: ['Frontend'],
+  tag: 'javascript',
+},
+{
+  title: 'Digital Clock',
+  description: 'A real-time digital clock that displays the current time with a clean and responsive UI.',
+  image: 'https://images.pexels.com/photos/1314544/pexels-photo-1314544.jpeg?auto=compress&cs=tinysrgb&w=800',
+  technologies: ['JavaScript', 'HTML5', 'CSS3'],
+  githubUrl: 'https://github.com/anjana732/digital-clock',
+  liveUrl: 'https://anjana732.github.io/JsProjects/DigitalClock/index.html',
+  categories: ['Frontend'],
+  tag: 'javascript',
+},
+{
+  title: 'Number Guessing Game',
+  description: 'An interactive game where users guess a random number with hints provided based on their input.',
+  image: 'https://images.pexels.com/photos/4425763/pexels-photo-4425763.jpeg?auto=compress&cs=tinysrgb&w=800',
+  technologies: ['JavaScript', 'HTML5', 'CSS3'],
+  githubUrl: 'https://github.com/anjana732/number-guessing-game',
+  liveUrl: 'https://anjana732.github.io/JsProjects/GuessNumber/index.html',
+  categories: ['Frontend'],
+  tag: 'javascript',
+},
+
+{
+  title: 'Unlimited Color Changer',
+  description: 'A fun app that continuously changes background colors on Start button click and stops on End button click.',
+  image: 'https://images.pexels.com/photos/939329/pexels-photo-939329.jpeg?auto=compress&cs=tinysrgb&w=800',
+  technologies: ['JavaScript', 'HTML5', 'CSS3'],
+  githubUrl: 'https://github.com/anjana732/unlimited-color-changer',
+  liveUrl: 'https://anjana732.github.io/JsProjects/BackGroundChanger/index.html',
+  categories: ['Frontend'],
+  tag: 'javascript',
+},
+{
+  title: 'Keypress Detector',
+  description: 'A simple app that detects and displays the key pressed by the user along with its code.',
+  image: 'https://images.pexels.com/photos/2115257/pexels-photo-2115257.jpeg?auto=compress&cs=tinysrgb&w=800',
+  technologies: ['JavaScript', 'HTML5', 'CSS3'],
+  githubUrl: 'https://github.com/anjana732/keypress-detector',
+  liveUrl: 'https://anjana732.github.io/JsProjects/KeyPressDetector/index.html',
+  categories: ['Frontend'],
+  tag: 'javascript',
+}
+
   ];
 
   const tabs = ['Featured', 'Frontend', 'Backend', 'Full Stack', 'Microservice'];
@@ -342,7 +500,10 @@ const Projects = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-            Featured <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Projects</span>
+            Featured{' '}
+            <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              Projects
+            </span>
           </h2>
           <p className="text-lg text-slate-300 max-w-3xl mx-auto">
             A showcase of my best work, demonstrating technical skills and creative problem-solving
@@ -357,10 +518,11 @@ const Projects = () => {
                 setActiveTab(tab);
                 setShowAll(false);
               }}
-              className={`px-4 py-2 rounded-full border text-sm font-medium transition-all duration-300 ${activeTab === tab
-                ? 'bg-blue-500 text-white border-blue-500'
-                : 'bg-transparent text-slate-300 border-slate-500 hover:bg-slate-700'
-                }`}
+              className={`px-4 py-2 rounded-full border text-sm font-medium transition-all duration-300 ${
+                activeTab === tab
+                  ? 'bg-blue-500 text-white border-blue-500'
+                  : 'bg-transparent text-slate-300 border-slate-500 hover:bg-slate-700'
+              }`}
             >
               {tab}
             </button>
@@ -400,14 +562,16 @@ const Projects = () => {
                         <Github className="w-4 h-4 mr-2" />
                         Code
                       </Button>
-                      <Button
-                        onClick={() => window.open(project.liveUrl, '_blank')}
-                        size="sm"
-                        className="bg-gradient-to-r from-blue-500 to-cyan-400 hover:from-blue-600 hover:to-cyan-500 text-white"
-                      >
-                        <Eye className="w-4 h-4 mr-2" />
-                        Live
-                      </Button>
+                      {project.liveUrl && (
+                        <Button
+                          onClick={() => window.open(project.liveUrl, '_blank')}
+                          size="sm"
+                          className="bg-gradient-to-r from-blue-500 to-cyan-400 hover:from-blue-600 hover:to-cyan-500 text-white"
+                        >
+                          <Eye className="w-4 h-4 mr-2" />
+                          Live
+                        </Button>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -435,14 +599,16 @@ const Projects = () => {
                       >
                         <Github className="w-5 h-5" />
                       </motion.a>
-                      <motion.a
-                        href={project.liveUrl}
-                        className="text-slate-400 hover:text-white transition-colors duration-200"
-                        whileHover={{ scale: 1.1 }}
-                        target="_blank"
-                      >
-                        <ExternalLink className="w-5 h-5" />
-                      </motion.a>
+                      {project.liveUrl && (
+                        <motion.a
+                          href={project.liveUrl}
+                          className="text-slate-400 hover:text-white transition-colors duration-200"
+                          whileHover={{ scale: 1.1 }}
+                          target="_blank"
+                        >
+                          <ExternalLink className="w-5 h-5" />
+                        </motion.a>
+                      )}
                     </div>
                     <div className="flex flex-wrap gap-2">
                       <span className="px-2 py-1 text-xs font-medium bg-gradient-to-r from-blue-500 to-cyan-400 text-white rounded-full">
@@ -460,7 +626,7 @@ const Projects = () => {
           )}
         </motion.div>
 
-        {activeTab === 'Featured' && filteredProjects.length > 3 && (
+        {filteredProjects.length > 3 && (
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
