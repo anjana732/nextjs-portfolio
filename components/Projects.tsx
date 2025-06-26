@@ -288,7 +288,7 @@ const Projects = () => {
       title: 'Authentication Microservice',
       description: 'A lightweight authentication microservice for handling user registration and login using secure password hashing and JWT-based authentication, designed for integration with other services.',
       image: 'https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['Node.js', 'Express.js', 'MongoDB', 'Mongoose', 'JWT', 'bcrypt', 'dotenv'],
+      technologies: ['Node.js', 'Express.js', 'MongoDB', 'Mongoose', 'JWT', 'bcrypt'],
       githubUrl: 'https://github.com/anjana732/authentication-microservice',
       liveUrl: '',
       categories: ['Microservice'],
