@@ -15,6 +15,7 @@ const Projects = () => {
       githubUrl: 'https://github.com/anjana732/flashcard-quiz-app',
       liveUrl: 'https://flashcard-quiz-app-eight.vercel.app/',
       categories: ['Featured', 'Full Stack'],
+      tag: 'React',
     },
     {
       title: 'Payment Microservice',
@@ -24,6 +25,7 @@ const Projects = () => {
       githubUrl: 'https://github.com/anjana732/payment-microservice',
       liveUrl: '#',
       categories: ['Featured', 'Microservice'],
+      tag: 'nodejs',
     },
     {
       title: 'Weather Dashboard',
@@ -33,6 +35,7 @@ const Projects = () => {
       githubUrl: 'https://github.com/anjana732/WeatherApp',
       liveUrl: 'https://anjana732.github.io/WeatherApp/',
       categories: ['Featured', 'Frontend'],
+      tag: 'HTML/CSS/JS',
     },
     {
       title: 'Authentication Microservice',
@@ -41,7 +44,8 @@ const Projects = () => {
       technologies: ['Node.js', 'Express.js', 'MongoDB', 'Mongoose', 'JWT', 'bcrypt', 'dotenv'],
       githubUrl: 'https://github.com/anjana732/authentication-microservice',
       liveUrl: '',
-      categories: ['Microservice']
+      categories: ['Microservice'],
+      tag: 'nodejs'
     },
     {
       title: 'Book Review API',
@@ -50,7 +54,8 @@ const Projects = () => {
       technologies: ['Node.js', 'Express.js', 'MongoDB', 'Mongoose', 'JWT', 'bcrypt', 'dotenv'],
       githubUrl: 'https://github.com/anjana732/book-review-api',
       liveUrl: '',
-      categories: ['Backend']
+      categories: ['Backend'],
+      tag: 'nodejs',
     }
 
   ];
@@ -194,14 +199,14 @@ const Projects = () => {
                       </motion.a>
                     </div>
                     <div className="flex flex-wrap gap-2">
-                      {project.categories.map((cat) => (
+                      {/* {project.categories.map((cat) => ( */}
                         <span
-                          key={cat}
+                          // key={cat}
                           className="px-2 py-1 text-xs font-medium bg-gradient-to-r from-blue-500 to-cyan-400 text-white rounded-full"
                         >
-                          {cat}
+                          {project.tag}
                         </span>
-                      ))}
+                      {/* ))} */}
                     </div>
                   </div>
                 </div>
