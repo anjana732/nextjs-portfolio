@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { ExternalLink, Github, Eye } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useState } from 'react';
 
 const Projects = () => {
   const projects = [
@@ -13,7 +14,7 @@ const Projects = () => {
       technologies: ['React', 'Node.js', 'webhook', 'Express', 'Gen AI'],
       githubUrl: 'https://github.com/anjana732/flashcard-quiz-app',
       liveUrl: 'https://flashcard-quiz-app-eight.vercel.app/',
-      featured: true,
+      categories: ['Featured', 'Full stack'],
     },
     {
       title: 'Payment Microservice',
@@ -22,7 +23,7 @@ const Projects = () => {
       technologies: ['Node.js', 'Express', 'Stripe', 'Razorpay', 'MongoDB'],
       githubUrl: 'https://github.com/anjana732/payment-microservice',
       liveUrl: '#',
-      featured: true,
+      categories: ['Featured', 'Microservice'],
     },
     {
       title: 'Weather Dashboard',
@@ -31,10 +32,28 @@ const Projects = () => {
       technologies: ['HTML5', 'OpenWeather API', 'Chart.js', 'SCSS'],
       githubUrl: 'https://github.com/anjana732/WeatherApp',
       liveUrl: 'https://anjana732.github.io/WeatherApp/',
-      featured: false,
+      categories: ['Featured', 'Frontend'],
+    },
+    {
+      title: 'Weather Dashboard',
+      description: 'A responsive weather application with location-based forecasts and detailed weather analytics.',
+      image: 'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=800',
+      technologies: ['HTML5', 'OpenWeather API', 'Chart.js', 'SCSS'],
+      githubUrl: 'https://github.com/anjana732/WeatherApp',
+      liveUrl: 'https://anjana732.github.io/WeatherApp/',
+      categories: ['Featured', 'Frontend'],
     }
-
   ];
+
+  const tabs = ['Featured', 'Frontend', 'Backend', 'Full Stack', 'Microservice'];
+  const [activeTab, setActiveTab] = useState('Featured');
+  const [showAll, setShowAll] = useState(false);
+
+  const filteredProjects = projects.filter((project) =>
+    activeTab === 'Featured' || project.categories.includes(activeTab)
+  );
+
+  const visibleProjects = showAll ? filteredProjects : filteredProjects.slice(0, 3);
 
   const container = {
     hidden: { opacity: 0 },
@@ -69,109 +88,141 @@ const Projects = () => {
           </p>
         </motion.div>
 
+        <div className="flex justify-center mb-10 gap-4 flex-wrap">
+          {tabs.map((tab) => (
+            <button
+              key={tab}
+              onClick={() => {
+                setActiveTab(tab);
+                setShowAll(false);
+              }}
+              className={`px-4 py-2 rounded-full border text-sm font-medium transition-all duration-300 ${
+                activeTab === tab
+                  ? 'bg-blue-500 text-white border-blue-500'
+                  : 'bg-transparent text-slate-300 border-slate-500 hover:bg-slate-700'
+              }`}
+            >
+              {tab}
+            </button>
+          ))}
+        </div>
+
         <motion.div
+          key={activeTab}
           variants={container}
           initial="hidden"
-          whileInView="show"
+          animate="show"
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          {projects.map((project, index) => (
-            <motion.div
-              key={project.title}
-              variants={item}
-              whileHover={{ y: -10, scale: 1.02 }}
-              className={`bg-slate-800/60 backdrop-blur-sm border border-slate-700/50 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all duration-300 ${project.featured ? 'md:col-span-2 lg:col-span-1' : ''
-                }`}
-            >
-              <div className="relative overflow-hidden group">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
-                  <div className="flex space-x-2">
-                    <Button 
-                      onClick={() => window.open(project.githubUrl, '_blank')}
-                      size="sm"
-                      variant="outline"
-                      className="bg-slate-800/80 backdrop-blur-sm border-slate-600 text-white hover:bg-slate-700/80"
-                    >
-                      <Github className="w-4 h-4 mr-2" />
-                      Code
-                    </Button>
-                    <Button
-                      onClick={() => window.open(project.liveUrl, '_blank')}
-                      size="sm"
-                      className="bg-gradient-to-r from-blue-500 to-cyan-400 hover:from-blue-600 hover:to-cyan-500 text-white"
-                    >
-                      <Eye className="w-4 h-4 mr-2" />
-                      Live
-                    </Button>
+          {visibleProjects.length > 0 ? (
+            visibleProjects.map((project) => (
+              <motion.div
+                key={project.title}
+                variants={item}
+                whileHover={{ y: -10, scale: 1.02 }}
+                className="bg-slate-800/60 backdrop-blur-sm border border-slate-700/50 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all duration-300"
+              >
+                <div className="relative overflow-hidden group">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
+                    <div className="flex space-x-2">
+                      <Button
+                        onClick={() => window.open(project.githubUrl, '_blank')}
+                        size="sm"
+                        variant="outline"
+                        className="bg-slate-800/80 backdrop-blur-sm border-slate-600 text-white hover:bg-slate-700/80"
+                      >
+                        <Github className="w-4 h-4 mr-2" />
+                        Code
+                      </Button>
+                      <Button
+                        onClick={() => window.open(project.liveUrl, '_blank')}
+                        size="sm"
+                        className="bg-gradient-to-r from-blue-500 to-cyan-400 hover:from-blue-600 hover:to-cyan-500 text-white"
+                      >
+                        <Eye className="w-4 h-4 mr-2" />
+                        Live
+                      </Button>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-3">{project.title}</h3>
-                <p className="text-slate-400 mb-4 leading-relaxed">{project.description}</p>
-
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.technologies.map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-3 py-1 bg-slate-700/50 text-slate-300 text-sm rounded-full border border-slate-600/50"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-
-                <div className="flex items-center justify-between">
-                  <div className="flex space-x-3">
-                    <motion.a
-                      href={project.githubUrl}
-                      className="text-slate-400 hover:text-white transition-colors duration-200"
-                      whileHover={{ scale: 1.1 }}
-                    >
-                      <Github className="w-5 h-5" />
-                    </motion.a>
-                    <motion.a
-                      href={project.liveUrl}
-                      className="text-slate-400 hover:text-white transition-colors duration-200"
-                      whileHover={{ scale: 1.1 }}
-                    >
-                      <ExternalLink className="w-5 h-5" />
-                    </motion.a>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-white mb-3">{project.title}</h3>
+                  <p className="text-slate-400 mb-4 leading-relaxed">{project.description}</p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.technologies.map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-3 py-1 bg-slate-700/50 text-slate-300 text-sm rounded-full border border-slate-600/50"
+                      >
+                        {tech}
+                      </span>
+                    ))}
                   </div>
-
-                  {project.featured && (
-                    <span className="px-2 py-1 bg-gradient-to-r from-blue-500 to-cyan-400 text-white text-xs rounded-full font-medium">
-                      Featured
-                    </span>
-                  )}
+                  <div className="flex items-center justify-between">
+                    <div className="flex space-x-3">
+                      <motion.a
+                        href={project.githubUrl}
+                        className="text-slate-400 hover:text-white transition-colors duration-200"
+                        whileHover={{ scale: 1.1 }}
+                        target="_blank"
+                      >
+                        <Github className="w-5 h-5" />
+                      </motion.a>
+                      <motion.a
+                        href={project.liveUrl}
+                        className="text-slate-400 hover:text-white transition-colors duration-200"
+                        whileHover={{ scale: 1.1 }}
+                        target="_blank"
+                      >
+                        <ExternalLink className="w-5 h-5" />
+                      </motion.a>
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      {project.categories.map((cat) => (
+                        <span
+                          key={cat}
+                          className="px-2 py-1 text-xs font-medium bg-gradient-to-r from-blue-500 to-cyan-400 text-white rounded-full"
+                        >
+                          {cat}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            ))
+          ) : (
+            <div className="col-span-full text-center text-slate-400 py-10">
+              No projects found in this category.
+            </div>
+          )}
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="text-center mt-12"
-        >
-          <Button
-            size="lg"
-            variant="outline"
-            className="border-slate-400 text-slate-300 hover:bg-slate-800 px-8 py-3 rounded-full font-semibold"
+        {filteredProjects.length > 3 && (
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="text-center mt-12"
           >
-            View All Projects
-          </Button>
-        </motion.div>
+            <Button
+              size="lg"
+              variant="outline"
+              onClick={() => setShowAll(!showAll)}
+              className="border-slate-400 text-slate-300 hover:bg-slate-800 px-8 py-3 rounded-full font-semibold"
+            >
+              {showAll ? 'Show Less' : 'View All Projects'}
+            </Button>
+          </motion.div>
+        )}
       </div>
     </section>
   );
